@@ -1,0 +1,17 @@
+﻿@model PFSI_APP.Models.PFSIModel
+
+@{
+    ViewBag.Title = "Contact";
+}
+<h2>@ViewBag.Title.</h2>
+
+<address>
+    Postal Fleet Services, Inc.<br />
+    2808 N 5th St, St Augustine, FL 32084<br />
+    <abbr title="Phone">P:</abbr>
+    904-824-2007
+</address>
+
+<address>
+    <strong>IT Department:</strong> <a href="mailto:@Html.Raw(Html.DisplayFor(model => model.Email))">@Html.DisplayFor(model => model.GetFullName, null)</a><br/>
+</address>
